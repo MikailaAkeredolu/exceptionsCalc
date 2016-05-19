@@ -1,3 +1,5 @@
+import io.akeredolu.ComplexNumberException;
+
 /**
  * Created by mikailaakeredolu on 5/18/16.
  */
@@ -27,8 +29,14 @@ public class Calculator {
     */
 
     public static double divide(double input1, double input2) throws DivisionByZeroException{
-        if(input2 == 0){throw  new DivisionByZeroException();}
+        if(input2 == 0){throw new DivisionByZeroException();}
         return input1/input2;
+    }
+
+    public static double squareRoot(double number) throws ComplexNumberException{
+        if(number < 0){ throw new ComplexNumberException();}
+
+        return Math.sqrt(number);
     }
 
 }
